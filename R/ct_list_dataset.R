@@ -35,7 +35,7 @@
 #'
 #'   # Search for datasets containing a keyword
 #'   catalog[
-#'     grepl("spills", catalog$name, ignore.case = TRUE),
+#'     grepl("spill", catalog$name, ignore.case = TRUE),
 #'     c("key", "uid", "name")
 #'   ]
 #' }
