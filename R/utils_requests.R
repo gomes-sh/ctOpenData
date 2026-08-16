@@ -1,6 +1,6 @@
 # Internal helpers for Connecticut Open Data requests ####
-# - .ct_endpoint(): constructs the Socrata endpoint URL from a dataset id
-# - .ct_add_filters(): adds equality filters (and IN() for multi-values) as a Socrata $where clause
+# - .ct_endpoint(): constructs the `Socrata` endpoint URL from a dataset id
+# - .ct_add_filters(): adds equality filters (and IN() for multi-values) as a `Socrata` $where clause
 # - .ct_add_where(): appends a raw SoQL WHERE expression (for ranges, >=, <, etc.)
 # - .ct_validate_date_yyyy_mm_dd(): validates Date or "YYYY-MM-DD" inputs
 # - .ct_build_date_where(): constructs server-side date filters using a dataset's default_date_field

@@ -18,20 +18,20 @@ queries, handling JSON responses, or performing type conversion.
 Designed for students, educators, researchers, journalists, civic
 technologists, and analysts, `ctOpenData` reduces the technical overhead
 required to begin working with municipal Open Data while preserving access to
-the underlying `Socrata` infrastructure.
+the underlying Socrata infrastructure.
 
 ---
 
 ## How `ctOpenData` Works
 
 The package provides a streamlined interface to the Connecticut Open Data
-Portal's `Socrata` API.
+Portal's Socrata API.
 
 Internally, `ctOpenData`:
 
 - retrieves metadata from the live Connecticut Open Data catalog
 - constructs parameterized HTTP requests
-- downloads JSON responses from `Socrata` endpoints
+- downloads JSON responses from Socrata endpoints
 - converts results into tidy tibble outputs
 - optionally cleans column names
 - optionally performs conservative type coercion
@@ -42,24 +42,24 @@ of datasets available through the Connecticut Open Data Portal.
 Datasets can then be downloaded using either:
 
 - a human-readable catalog `key`
-- the official `Socrata` dataset UID, such as `"ffju-s5c5"`
+- the official Socrata dataset UID, such as `"ffju-s5c5"`
 
 The human-readable key is designed to improve readability and usability, while
-the UID is the stable identifier used by the `Socrata` platform.
+the UID is the stable identifier used by the Socrata platform.
 
 ## Core Functions
 
 The package provides three primary functions:
 
 - `ct_list_datasets()` retrieves a live catalog of available Connecticut Open
-  Data datasets, including human-readable keys, `Socrata` UIDs, names, and other
+  Data datasets, including human-readable keys, Socrata UIDs, names, and other
   available metadata.
 
 - `ct_pull_dataset()` downloads cataloged datasets using either a
-  human-readable key or `Socrata` UID, with support for filtering, ordering, date
+  human-readable key or Socrata UID, with support for filtering, ordering, date
   ranges, optional column-name cleaning, and optional type coercion.
 
-- `ct_any_dataset()` downloads data directly from a valid `Socrata` JSON
+- `ct_any_dataset()` downloads data directly from a valid Socrata JSON
   endpoint without requiring the dataset to appear in the package catalog.
 
 Datasets retrieved through `ct_pull_dataset()` support arguments including:
@@ -80,9 +80,9 @@ All functions return tibble outputs.
 Advanced users may also provide raw SoQL conditions through the `where`
 argument.
 
-SoQL, or `Socrata` Query Language, is the query syntax used by `Socrata`-powered
+SoQL, or Socrata Query Language, is the query syntax used by Socrata-powered
 Open Data portals. Additional information is available from the
-[`Socrata` developer documentation](https://dev.`Socrata`.com/docs/queries/).
+[Socrata developer documentation](https://dev.socrata.com/docs/queries/).
 
 ---
 
@@ -188,7 +188,7 @@ date_filtered_data <- ct_pull_dataset(
 
 ---
 
-## Accessing Any `Socrata` Endpoint
+## Accessing Any Socrata Endpoint
 
 When a dataset is not available through `ct_list_datasets()`, it can be
 downloaded directly using `ct_any_dataset()`.
@@ -201,7 +201,7 @@ endpoint_data <- ct_any_dataset(
 ```
 
 Use `ct_pull_dataset()` for catalog-based workflows and
-`ct_any_dataset()` when working directly with a `Socrata` JSON endpoint.
+`ct_any_dataset()` when working directly with a Socrata JSON endpoint.
 
 ---
 
