@@ -20,7 +20,7 @@ ct_pull_dataset(
 )
 }
 \arguments{
-\item{dataset}{A single dataset `key` or Socrata dataset `uid` from
+\item{dataset}{A single dataset `key` or `Socrata` dataset `uid` from
 [ct_list_datasets()]. For example, a key may look like
 `"spill_incidents_from_july_1_2022_to_recent_for_download"`, while a UID may look like `"ffju-s5c5"`.}
 
@@ -46,7 +46,7 @@ can identify available date columns by inspecting the dataset on the
 Connecticut Open Data Portal or by pulling a small sample with `limit`.}
 
 \item{where}{Optional raw SoQL `WHERE` clause for advanced filtering. SoQL is
-the Socrata Query Language used by Connecticut Open Data. If `date`, `from`,
+the `Socrata` Query Language used by Connecticut Open Data. If `date`, `from`,
 or `to` are also supplied, their generated conditions are combined with
 `where` using `AND`.}
 
@@ -69,24 +69,24 @@ A tibble containing rows from the requested Connecticut Open Data
   dataset.
 }
 \description{
-Downloads a dataset from the Connecticut Open Data Socrata API using either a
-human-readable catalog `key` or the official Socrata dataset `uid` returned by
+Downloads a dataset from the Connecticut Open Data `Socrata` API using either a
+human-readable catalog `key` or the official `Socrata` dataset `uid` returned by
 [ct_list_datasets()].
 }
 \details{
 When a catalog `key` is supplied, `ct_pull_dataset()` first retrieves the
-live Connecticut Open Data catalog to look up the corresponding Socrata `uid`,
+live Connecticut Open Data catalog to look up the corresponding `Socrata` `uid`,
 then sends a second request to download the dataset itself. Supplying a `uid`
 directly is more stable and avoids ambiguity, while keys are provided for
 readability and classroom-friendly workflows.
 
 Dataset keys are generated from dataset names using
 [janitor::make_clean_names()]. Because keys are derived from live catalog
-metadata, Socrata UIDs are the most stable identifiers.
+metadata, `Socrata` UIDs are the most stable identifiers.
 
 
 `ct_pull_dataset()` is designed for common catalog-based workflows. For
-arbitrary Socrata JSON endpoints that are not included in the package catalog,
+arbitrary `Socrata` JSON endpoints that are not included in the package catalog,
 use [ct_any_dataset()].
 
 The `filters` argument is intended for simple exact-match filtering. For more
@@ -109,7 +109,7 @@ if (interactive() && curl::has_internet()) {
   # Pull by human-readable key
   ct_pull_dataset("spill_incidents_from_july_1_2022_to_recent_for_download", limit = 3)
 
-  # Pull by Socrata UID
+  # Pull by `Socrata` UID
   ct_pull_dataset("ffju-s5c5", limit = 3)
 
   # Filter to one value

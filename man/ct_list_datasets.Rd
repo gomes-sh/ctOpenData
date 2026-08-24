@@ -11,7 +11,7 @@ A tibble containing available Connecticut Open Data datasets. Important
   columns include:
   \describe{
     \item{key}{A human-readable dataset key generated from the dataset name.}
-    \item{uid}{The official Socrata dataset identifier used by Connecticut Open
+    \item{uid}{The official `Socrata` dataset identifier used by Connecticut Open
       Data.}
     \item{name}{The dataset name from the Connecticut Open Data catalog.}
   }
@@ -24,9 +24,9 @@ Open Data Portal catalog table (`CATALOG_DATASET_ID`) and returns dataset
 metadata that can be used with [ct_pull_dataset()].
 }
 \details{
-The returned tibble includes both the official Socrata dataset `uid` and a
+The returned tibble includes both the official `Socrata` dataset `uid` and a
 human-readable `key`. The `uid` is the stable identifier used by the Connecticut
-Open Data Portal and Socrata API, while the `key` is generated from the
+Open Data Portal and `Socrata` API, while the `key` is generated from the
 dataset name using [janitor::make_clean_names()] to make datasets easier to
 reference in R code, especially in classroom and reproducible research
 settings.

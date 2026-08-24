@@ -2,7 +2,7 @@
 % Please edit documentation in R/ct_any_dataset.R
 \name{ct_any_dataset}
 \alias{ct_any_dataset}
-\title{Pull any Connecticut Open Data dataset from a Socrata JSON endpoint}
+\title{Pull any Connecticut Open Data dataset from a `Socrata` JSON endpoint}
 \usage{
 ct_any_dataset(
   json_link,
@@ -13,7 +13,7 @@ ct_any_dataset(
 )
 }
 \arguments{
-\item{json_link}{A single Socrata dataset JSON endpoint URL, such as
+\item{json_link}{A single `Socrata` dataset JSON endpoint URL, such as
 `"https://data.ct.gov/resource/ffju-s5c5.json"`.}
 
 \item{limit}{Number of rows to retrieve. Defaults to 10,000.}
@@ -34,17 +34,17 @@ A tibble containing rows from the requested Connecticut Open Data
   endpoint.
 }
 \description{
-Downloads data from any Connecticut Open Data Socrata JSON endpoint and returns
+Downloads data from any Connecticut Open Data `Socrata` JSON endpoint and returns
 the result as a tibble. This function is useful for datasets that are not
 included in the curated catalog returned by [ct_list_datasets()].
 }
 \details{
-Connecticut Open Data datasets have Socrata JSON endpoints that usually follow
+Connecticut Open Data datasets have `Socrata` JSON endpoints that usually follow
 this pattern:
 
 `https://data.ct.gov/resource/<dataset_uid>.json`
 
-For example, a dataset with the Socrata UID `"ffju-s5c5"` would have the JSON
+For example, a dataset with the `Socrata` UID `"ffju-s5c5"` would have the JSON
 endpoint:
 
 `https://data.ct.gov/resource/ffju-s5c5.json`
@@ -58,13 +58,13 @@ to the supplied JSON endpoint. Unlike [ct_pull_dataset()], it does not look
 up defaults such as catalog keys, date fields, or default ordering.
 
 This function is intended for direct endpoint access. For catalog-based
-workflows using readable keys or Socrata UIDs, use [ct_pull_dataset()].
+workflows using readable keys or `Socrata` UIDs, use [ct_pull_dataset()].
 }
 \examples{
 # Examples that hit the live Connecticut Open Data API are guarded so CRAN
 # checks do not fail when the network is unavailable or slow.
 if (interactive() && curl::has_internet()) {
-  # Build a JSON endpoint from a Socrata UID
+  # Build a JSON endpoint from a `Socrata` UID
   uid <- "ffju-s5c5"
   endpoint <- paste0("https://data.ct.gov/resource/", uid, ".json")
 
